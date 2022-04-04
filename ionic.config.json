@@ -1,0 +1,7 @@
+{
+  "name": "EE4213_pj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
