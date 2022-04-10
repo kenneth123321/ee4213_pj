@@ -1,0 +1,118 @@
+<ion-content style="--background: lightblue">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="content-container">
+    <ion-content scroll-y="false" >
+
+      <div class="title-container">
+        <p>Medical Records
+          <ion-icon name="qr-code-outline" *ngIf="this.login"></ion-icon></p>
+      </div>
+
+      <div class="list-container">
+        <ion-content *ngIf="!this.login">
+          <p style="color:black; font-size: 1.2em; text-align: center; width: 100%;">
+           No Account Login
+          </p>
+        </ion-content>
+        <ion-content  *ngIf="this.login">
+            <div class="date">
+              <ion-chip mode="ios" color="primary">
+                <div class="chip-container">
+                  <ion-icon name="calendar-number-outline" color="danger"></ion-icon>
+                  &nbsp; <p>2022-03</p>
+                </div>
+              </ion-chip>
+            </div>
+            <div class="item">
+              <div class="info">
+                <div class="day"><p>22</p></div>
+                <div class="detail">
+                  <p>Venue: ABC Hospital</p>
+                  <p>Illness: Covid-19</p>
+                </div>
+              </div>
+              <div class="further">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="item">
+              <div class="info">
+                <div class="day"><p>15</p></div>
+                <div class="detail">
+                  <p>Venue: 123 Hospital</p>
+                  <p>Illness: Allergies</p>
+                </div>
+              </div>
+              <div class="further">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="item">
+              <div class="info">
+                <div class="day"><p>13</p></div>
+                <div class="detail">
+                  <p>Venue: ABC Hospital</p>
+                  <p>Illness: Colds </p>
+                </div>
+              </div>
+              <div class="further">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+
+            <div class="date">
+              <ion-chip mode="ios" color="primary">
+                <div class="chip-container">
+                  <ion-icon name="calendar-number-outline" color="danger"></ion-icon>
+                  &nbsp; <p>2021-12</p>
+                </div>
+              </ion-chip>
+            </div>
+
+            <div class="item">
+              <div class="info">
+                <div class="day"><p>09</p></div>
+                <div class="detail">
+                  <p>Venue: City Hospital</p>
+                  <p>Illness: Headaches</p>
+                </div>
+              </div>
+              <div class="further">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+
+            <div class="date">
+              <ion-chip mode="ios" color="primary">
+                <div class="chip-container">
+                  <ion-icon name="calendar-number-outline" color="danger"></ion-icon>
+                  &nbsp; <p>2021-10</p>
+                </div>
+              </ion-chip>
+            </div>
+
+            <div class="item">
+              <div class="info">
+                <div class="day"><p>24</p></div>
+                <div class="detail">
+                  <p>Venue: City Hospital</p>
+                  <p>Illness: Cold </p>
+                </div>
+              </div>
+              <div class="further">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+            </div>
+  
+
+
+        </ion-content>
+      </div>
+    </ion-content>
+  </div>
+
+</ion-content>

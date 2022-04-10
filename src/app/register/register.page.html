@@ -1,0 +1,119 @@
+<ion-content #page1 class="back-page" style="--background: lightblue;">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="submitting">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+
+</ion-content>
+
+<ion-content #page2 class="font-page" style="--background: lightblue;">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="content-container">
+    <ion-content >
+        <div class="title">
+          <p>Registration form</p>
+        </div>
+
+       <ion-content class="form" [formGroup]="group">
+        <div class="item">
+          <p>Surname: </p>
+          <ion-input class="half" type="text" [(ngModel)]="form.surname" formControlName="surname"></ion-input>
+          <div class="error" *ngIf="group.get('surname').hasError('pattern') && group.get('surname').touched">
+            Invalid Name
+          </div>
+          <div class="error" *ngIf="group.get('surname').hasError('required') && group.get('surname').touched">
+            Require Surname
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Last Name: </p>
+          <ion-input type="text" [(ngModel)]="form.lastname"  formControlName="lastname"></ion-input>
+          <div class="error" *ngIf="group.get('lastname').hasError('pattern') && group.get('lastname').touched">
+            Invalid Name
+          </div>
+          <div class="error" *ngIf="group.get('lastname').hasError('required') && group.get('lastname').touched">
+            Require Last Name
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Birth of Date: </p>
+          <ion-input class="half" type="date"  max="{{this.date}}" [(ngModel)]="form.birth"  formControlName="birth"></ion-input>
+          <div class="error" *ngIf="group.get('birth').hasError('required') && group.get('birth').touched">
+            Require Birth of Date
+          </div>
+        </div>
+
+        <div class="item">
+          <p>HKID: </p>
+          <ion-input class="half" type="text" [(ngModel)]="form.hkid" formControlName="hkid"></ion-input>
+          <div class="error" *ngIf="group.get('hkid').hasError('pattern') && group.get('hkid').touched">
+            Invalid HKID
+          </div>
+          <div class="error" *ngIf="group.get('hkid').hasError('required') && group.get('hkid').touched">
+            Require HKID
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Phone No: </p>
+          <ion-input class="half" type="number" [(ngModel)]="form.phone" formControlName="phone"></ion-input>
+          <div class="error" *ngIf="group.get('phone').hasError('pattern') && group.get('phone').touched">
+            Invalid Phone No (8-digit)
+          </div>
+          <div class="error" *ngIf="group.get('phone').hasError('required') && group.get('phone').touched">
+            Require Phone No
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Email: </p>
+          <ion-input  type="email" [(ngModel)]="form.email" formControlName="email"></ion-input>
+          <div class="error" *ngIf="group.get('email').hasError('email') && group.get('email').touched">
+            Invalid Email
+          </div>
+          <div class="error" *ngIf="group.get('email').hasError('required') && group.get('email').touched">
+            Require Email
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Password: </p>
+          <ion-input  type="password" [(ngModel)]="form.password" formControlName="password"></ion-input>
+          <div class="error" *ngIf="group.get('password').hasError('minlength') && group.get('password').touched">
+            Invalid Password (9 char or longer)
+          </div>
+          <div class="error" *ngIf="group.get('password').hasError('required') && group.get('password').touched">
+            Require Password
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Confirm Password: </p>
+          <ion-input  type="password" [(ngModel)]="form.password2" formControlName="password2"></ion-input>
+          <div class="error" *ngIf="group.get('password2').hasError('minlength') && group.get('password2').touched">
+            Invalid Confirm Password (9 char or longer)
+          </div>
+          <div class="error" *ngIf="group.get('password2').hasError('required') && group.get('password2').touched">
+            Require Confirm Password
+          </div>
+        </div>
+       </ion-content>
+    </ion-content>
+  </div>
+
+  <div class="btn-container">
+    <ion-button (click)="submitForm()" [disabled]="group.invalid">Submit</ion-button>
+    <ion-button (click)="goBack()">Back</ion-button>
+  </div>
+
+</ion-content>

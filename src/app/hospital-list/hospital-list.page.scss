@@ -1,0 +1,72 @@
+.icon-container{
+    width: 100%;
+    height: 15%;
+  
+    .title-image{
+      margin-left: 3%;
+      height: 95%;
+    }
+  }
+  
+  .content-container{
+    width: 94%;
+    height: 83%;
+    border-radius: 2em;
+    background: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 3%;
+    margin-right: 3%;
+  
+    ion-content{
+      width: 100%;
+      // height: 100%;
+      --background: white;
+      --padding-start: 5%;
+      --padding-end: 5%;
+  
+      .searchbar{
+        height: 12%;
+        width: 100%;
+
+        ion-searchbar{
+          color: black;
+          border-radius: 0.5em;
+          font-size: 1.2em;
+        }
+      }
+
+      .list{
+        margin-top: 5%;
+        height: 83%;
+        width: 100%;
+
+        ion-list{
+          background: white;
+
+          ion-item{
+            --background: white;
+            --padding-start: 0;
+            color: black;
+
+            p{
+              margin: 0;
+              color: black;
+              font-size: 1em;
+            }
+
+            ion-icon{
+              text-align: right;
+              color: black;
+              font-size: 2em;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+  
+  .mg-btm{
+    margin-bottom: 3%;
+  }

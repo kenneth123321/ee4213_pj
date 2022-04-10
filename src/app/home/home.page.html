@@ -1,20 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content style="--background: lightblue">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="icon-container">
+      <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+    </div>  
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="content-container">
+      <ion-content scroll-y="false">
+        <div class="applist-container">
+          <div class="applist-title">
+            <p><ion-icon name="link-outline"></ion-icon>Useful Link</p>
+          </div>
+
+          <div class="applist-table">
+            <div class="item">
+              <div class="app-icon">
+                <a href="https://www.google.com"><img src="./../../assets/applist/app1.png"/></a>
+              </div>
+              <p class="app-name">HP</p>
+            </div>
+            <div class="item">
+              <div class="app-icon">
+                <a href="https://www.google.com"><img src="./../../assets/applist/app2.png"/></a>
+              </div>
+              <p class="app-name">HA</p>
+            </div>
+            <div class="item">
+              <div class="app-icon">
+                <a href="https://www.google.com"><img src="./../../assets/applist/app3.png"/></a>
+              </div>
+              <p class="app-name">CDC</p>
+            </div>
+            <div class="item">
+              <div class="app-icon">
+                <a href="https://www.google.com"><img src="./../../assets/applist/app4.png"/></a>
+              </div>
+              <p class="app-name">DH</p>
+            </div>
+          </div>
+        </div>
+        <div class="news-container">
+          <div class="news-title">
+            <p><ion-icon name="newspaper-outline"></ion-icon> Latest News</p>
+          </div>
+
+          <div class="news-table">
+            <ion-content scroll-y="true" style="overflow-y: scroll !important">
+              <ion-scroll >
+                <div class="news-card">
+                  <div class="news-img-container news3">
+                  </div>
+                  <div class="news-text-container">
+                    <p class="news-title">Chief Executive announces Queen Elizabeth Hospital will be dedicated to treating Covid-19 patients</p>
+                    <p class="news-link"><a href="https://www.google.com">Continue reading ></a></p>
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-img-container news2">
+                  </div>
+                  <div class="news-text-container">
+                    <p class="news-title">Colors bounced around in her head. They mixed and threaded themselves together. Even colors that had no business being together. They were all one</p>
+                    <p class="news-link"><a href="https://www.google.com">Continue reading ></a></p>
+                  </div>
+                </div>
+
+                <div class="news-card">
+                  <div class="news-img-container news2">
+                  </div>
+                  <div class="news-text-container">
+                    <p class="news-title">Colors bounced around in her head. They mixed and threaded themselves together. Even colors that had no business being together. They were all one</p>
+                    <p class="news-link"><a href="https://www.google.com">Continue reading ></a></p>
+                  </div>
+                </div>
+              </ion-scroll>
+            </ion-content>
+          </div>
+        </div>
+      </ion-content>
+    </div>
+
 </ion-content>

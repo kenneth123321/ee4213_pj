@@ -1,0 +1,46 @@
+<ion-content #bg class="login-page" [scrollX]="false" [scrollY]="false">
+  <div class="wrapper2">
+    <div class="layer">
+    </div>
+    <p>logining..</p>
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+</ion-content>
+
+<ion-content #page class="font-page" [scrollX]="false" [scrollY]="false">
+  <div class="wrapper">
+    <div class="layer">
+    </div>
+    <div style="margin-top: 1em; width: 90%; text-align: left;  z-index: 2;">
+      <ion-icon name="arrow-back" style="color: black; font-size: 1.6em; font-weight: bold;" (click)="goBack()">
+      </ion-icon>
+    </div>
+    <p><img style="height: 70%;" src="./../../assets/icon/company_icon.svg" /></p>
+
+    <div class="panel">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="call"></ion-icon>
+        </ion-label>
+        <ion-input placeholder="Phone No." type="text" [(ngModel)]="form.mid" [disabled]="disable_btn"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="lock-closed"></ion-icon>
+        </ion-label>
+        <ion-input placeholder="Password" type="password" [(ngModel)]="form.mobile" [disabled]="disable_btn"></ion-input>
+      </ion-item>
+      <div class="rmb_me">
+        <ion-checkbox style="color: black;" color="primary" [(ngModel)]="rmb_me" [disabled]="disable_btn"></ion-checkbox>
+        <p style="margin: 0; color: black;">&nbsp;Remember Me</p>
+      </div>
+      
+      <ion-button #loginbtn (click)="login()" [disabled]="disable_btn" size="small">Login</ion-button>
+
+      <div class="rand-row">
+        <p (click)="goReg()" class="register"><a>Reg Account ></a></p>
+        <p  class="register"><a>Forgot Password ></a></p>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,141 @@
+.font-page{
+  transition: 1s linear;
+  position: absolute;
+}
+
+.back-page{
+  z-index: -2; 
+}
+
+.submitting{
+  width: 100%;
+  height: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    color: black;
+  }
+
+  ion-spinner{
+    margin-top: 0.8em;
+    color: black;
+    transform: scale(5);
+}
+}
+
+.icon-container{
+    width: 100%;
+    height: 13%;
+  
+    .title-image{
+      margin-left: 3%;
+      height: 95%;
+    }
+  }
+  
+  .content-container{
+    width: 94%;
+    height: 75%;
+    border-radius: 2em;
+    background: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 3%;
+    margin-right: 3%;
+  
+    ion-content{
+      width: 100%;
+      height: 100%;
+      --background: white;
+      --padding-start: 5%;
+      --padding-end: 5%;
+      display: flex;
+      flex-direction: column;
+      
+
+      .title{
+            height: 8%;
+            width: 100%;
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 2%;
+
+            p{
+                margin: 0;
+                color: black;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+       }
+
+       .form{
+           height: 90%;
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+
+           .item{
+            // height: 18%;
+            width: 100%;
+            font-size: 1.1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-top: 3%;
+
+            ion-input{
+                min-height: 2em;
+                max-height: 2.3em;
+                color: black;
+                font-size: 1em;
+                border-radius: 1em;
+                box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
+                --background: rgba(244, 244, 245, 0.5);
+                padding-bottom: 2%;
+            }
+
+            .error{
+                color:red;
+                font-size: 0.8em;
+                padding-left: 2%;
+            }
+
+            .half{
+                width: 60% !important;
+            }
+
+            p{
+                margin: 0;
+                color: black;
+            }
+        }
+       }
+
+    }
+  }
+
+  .btn-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    ion-button{
+      height: 70%;
+      width: 35%;
+    }
+
+}
+  
+  .mg-btm{
+    margin-bottom: 3%;
+  }

@@ -1,0 +1,117 @@
+<ion-content #page2 style="--background: lightblue;">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="content-container">
+    <ion-content scroll-y="false">
+        <div class="title">
+          <p>ABC Hospital</p>
+        </div>
+
+          <div class="slider">
+            <ion-slides [options]="slideOptsOne">
+              <ion-slide>
+                <div class="slides" style="background-image: url('./../../assets/hospital/1.png');">
+                </div>
+                <p>AED</p>
+              </ion-slide>
+    
+              <ion-slide>
+                <div class="slides" style="background-image: url('./../../assets/hospital/2.png');">
+                </div>
+                <p>Minibus</p>
+              </ion-slide>
+    
+              <ion-slide>
+                <div class="slides" style="background-image: url('./../../assets/hospital/3.png');">
+                </div>
+                <p>Room</p>
+              </ion-slide>
+    
+            </ion-slides>
+          </div>
+    
+          <div class="list-item">
+            <ion-content style="--background: none; --color: none;">
+              <ion-list style="width: 100%; background: none">
+                <div class="item" (click)="expandContent('1')">
+                  <ion-icon class="item-icon" name="call-outline"></ion-icon>
+                  <p>Telephone</p>
+                  <ion-icon class="open-icon" name="{{this.openIcon1}}"></ion-icon>
+                </div>
+                <p class="content" #item1>{{this.desc1}}
+                  <br>
+                  <span style="color:cornflowerblue; border-bottom: 2px solid cornflowerblue; font-weight: bold;" (click)="writeToClipboard(this.desc1)">
+                    Copy <ion-icon class="action-icon" name="copy"></ion-icon>
+                  </span>
+                </p>
+    
+                <div class="item" (click)="expandContent('2')">
+                  <ion-icon class="item-icon" name="mail-outline"></ion-icon>
+                  <p>Email</p>
+                  <ion-icon class="open-icon" name="{{this.openIcon2}}"></ion-icon>
+                </div>
+                <p class="content" #item2>{{this.desc2}}
+                  <br>
+                  <span style="color:cornflowerblue; border-bottom: 2px solid cornflowerblue; font-weight: bold;" (click)="writeToClipboard(this.desc2)">
+                    Copy <ion-icon class="action-icon" name="copy"></ion-icon>
+                  </span>
+                </p>
+    
+                <div class="item" (click)="expandContent('3')">
+                  <ion-icon class="item-icon" name="location-outline"></ion-icon>
+                  <p>Address</p>
+                  <ion-icon class="open-icon" name="{{this.openIcon3}}"></ion-icon>
+                </div>
+                <p class="content" #item3>{{this.desc3}}
+                  <br>
+                  <span style="color:cornflowerblue; border-bottom: 2px solid cornflowerblue; font-weight: bold;" (click)="openAppUrl('map','','')">
+                    Map <ion-icon class="action-icon" name="arrow-redo"></ion-icon>
+                  </span>
+                </p>
+    
+                <div class="item" (click)="expandContent('4')">
+                  <ion-icon class="item-icon" name="train-outline"></ion-icon>
+                  <p>Transport</p>
+                  <ion-icon class="open-icon" name="{{this.openIcon4}}"></ion-icon>
+                </div>
+                <p class="content" #item4>{{this.desc4}}
+                  <br>
+                  <span style="color:cornflowerblue; border-bottom: 2px solid cornflowerblue; font-weight: bold;" (click)="writeToClipboard(this.desc4)">
+                    Copy <ion-icon class="action-icon" name="arrow-redo"></ion-icon>
+                  </span>
+                </p>
+    
+                <div class="item" (click)="expandContent('5')">
+                  <ion-icon class="item-icon" name="time-outline"></ion-icon>
+                  <p>Visiting Hours</p>
+                  <ion-icon class="open-icon" name="{{this.openIcon5}}"></ion-icon>
+                </div>
+                <p class="content" #item5>{{this.desc5}}
+                  <br>
+                  <span style="color:cornflowerblue; border-bottom: 2px solid cornflowerblue; font-weight: bold;" (click)="writeToClipboard(this.desc5)">
+                    Copy <ion-icon class="action-icon" name="arrow-redo"></ion-icon>
+                  </span>
+                </p>
+  
+    
+              </ion-list>
+            </ion-content>
+    
+          </div>
+
+       </ion-content>
+  </div>
+
+  <div class="btn-container">
+    <ion-button [disabled]="!this.login" >
+      <span *ngIf="this.login">Reserve</span>
+      <span *ngIf="!this.login" class="error">Login to reserve</span>
+    </ion-button>
+    
+    <ion-button (click)="goBack()">Back</ion-button>
+  </div>
+
+</ion-content>

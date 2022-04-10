@@ -1,0 +1,88 @@
+<ion-content style="--background: lightblue">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="content-container">
+    <ion-content >
+      <div class="item-list">
+
+        <div class="item" *ngIf="!this.login" (click)="goLogin()">
+          <p>
+            <ion-icon name="log-in-outline"></ion-icon>
+            &nbsp; Login
+          </p>
+          <p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </p>
+        </div>
+
+        <div class="item" *ngIf="this.login" (click)="logout()">
+          <p>
+            <ion-icon name="log-out-outline"></ion-icon>
+            &nbsp; Logout
+          </p>
+          <p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </p>
+        </div>
+        
+        <div class="item" *ngIf="this.login">
+          <p>
+            <ion-icon name="pencil-outline"></ion-icon>
+            &nbsp; Edit profile
+          </p>
+          <p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </p>
+        </div>
+
+        <div class="item">
+          <p>
+            <ion-icon name="notifications"></ion-icon>
+            &nbsp; Notification
+          </p>
+          <p>
+            <ion-toggle mode="ios" name="blueberry" checked></ion-toggle>
+          </p>
+        </div>
+
+        <div class="lang">
+          <p>
+            <ion-icon name="language"></ion-icon>
+            &nbsp; Language
+          </p>
+          <ion-segment color="primary" mode="ios" [(ngModel)]="lang">
+            <ion-segment-button value="cn" >
+              <ion-label>Chinese</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="en">
+              <ion-label>English</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+        <div class="lang">
+          <p>
+            <ion-icon name="text"></ion-icon>
+            &nbsp; Font Size
+          </p>
+          <ion-segment color="primary" mode="ios" [(ngModel)]="size">
+            <ion-segment-button value="small" >
+              <ion-label>Small</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="medium">
+              <ion-label>Medium</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="large">
+              <ion-label>Large</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+      </div>
+    </ion-content>
+  </div>
+
+</ion-content>

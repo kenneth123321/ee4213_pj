@@ -1,0 +1,85 @@
+.icon-container{
+    width: 100%;
+    height: 15%;
+  
+    .title-image{
+      margin-left: 3%;
+      height: 95%;
+    }
+  }
+  
+  .content-container{
+    width: 94%;
+    height: 83%;
+    border-radius: 2em;
+    background: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 3%;
+    margin-right: 3%;
+  
+    ion-content{
+      width: 100%;
+      // height: 100%;
+      --background: white;
+      --padding-start: 5%;
+      --padding-end: 5%;
+      
+      .item-list{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        font-size: 1.3em;
+
+        .item{
+          height: 15%;
+          width: 100%;
+          border-bottom: 1.5px solid grey;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p{
+            margin: 0;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+
+        .lang{
+          height: 25%;
+          width: 100%;
+          border-bottom: 1.5px solid grey;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+
+          p{
+            height: 40%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+          }
+
+          ::part(indicator-background) {
+            background-color: lightgray;
+          }
+
+          ion-label{
+            color: black;
+          }
+        }
+      }
+  
+    }
+  
+  }
+  
+  .mg-btm{
+    margin-bottom: 3%;
+  }

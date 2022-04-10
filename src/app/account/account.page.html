@@ -1,0 +1,87 @@
+<ion-content style="--background: lightblue">
+
+  <div class="icon-container">
+    <img class="title-image" src="./../../assets/icon/company_icon.svg" />
+  </div>  
+
+  <div class="content-container">
+    <ion-content scroll-y="false">
+      <div class="avator-container">
+        <img src="./../../assets/icon/person-circle-outline.svg">
+        <p class="name-title" *ngIf="this.login">Chan Tai Man</p>
+        <p class="name-title" *ngIf="!this.login">No Account Login</p>
+      </div>
+
+      <div class="info-container">
+        <div class="box">
+            <div class="item">
+              <p class="item-title"><ion-icon name="egg-outline"></ion-icon>&nbsp; Birth Date:</p>
+              <p class="item-info" ><span *ngIf="this.login">1999-09-09</span></p>
+            </div>
+
+            <div class="item">
+              <p class="item-title"><ion-icon name="call-outline"></ion-icon>&nbsp; Phone No:</p>
+              <p class="item-info" ><span *ngIf="this.login">1234 5678</span></p>
+            </div>
+
+            <div class="item">
+              <p class="item-title"><ion-icon name="mail-outline"></ion-icon>&nbsp; Email:</p>
+              <p class="item-info"><span *ngIf="this.login">ctm123@gmail.com</span></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="booking-container">
+          <p class="booking-title"><ion-icon name="calendar-outline"></ion-icon>&nbsp; My booking</p>
+          <div class="booking-list">
+            <ion-content  *ngIf="this.login">
+              <ion-scroll>
+
+                <div class="item">
+                  <div class="item-content">
+                    <p>Venue: ABC hospital</p>
+                    <p>Time: 2023-01-09</p>
+                  </div>
+                  <div class="item-icon">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="item-content">
+                    <p>Venue: ABC hospital</p>
+                    <p>Time: 2022-12-09</p>
+                  </div>
+                  <div class="item-icon">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="item-content">
+                    <p>Venue: ABC hospital</p>
+                    <p>Time: 2022-11-09</p>
+                  </div>
+                  <div class="item-icon">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="item-content">
+                    <p>Venue: ABC hospital</p>
+                    <p>Time: 2022-10-09</p>
+                  </div>
+                  <div class="item-icon">
+                    <ion-icon name="pencil-outline"></ion-icon>
+                  </div>
+                </div>
+
+              </ion-scroll>
+            </ion-content>
+          </div>
+      </div>
+    </ion-content>
+  </div>
+
+</ion-content>
