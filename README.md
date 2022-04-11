@@ -11,4 +11,4 @@ Password: 123
 
 Registration:
 
-Phone no must be 11111111 (1 x 8)
+Phone No. must be 11111111 (1 x 8)
